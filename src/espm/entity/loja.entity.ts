@@ -5,24 +5,19 @@ export class Loja {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: 'char', length: 50 })
+  @Column({nullable:true})
   nome: string;
 
-  @Column({ type: 'char', length: 100 })
+  @Column({nullable:true})
   cnpj: string;
 
-  @Column({ type: 'char', length: 50 })
+  @Column({nullable:true})
   cidade: string;
 
-  @Column({ type: 'char', length: 50 })
+  @Column({nullable:true})
   estado: string;
 
-  //###################################################################
-  //############################ RELAÇÕES #############################
-  //###################################################################
+  @Column({nullable:true})
+  produtos: string;
 
-  // @ManyToOne(type => Pessoa, pessoa => pessoa.autenticacao, {
-  //   eager: true, cascade: true, onDelete: "CASCADE"
-  // })
-  // pessoa: Pessoa;
 }

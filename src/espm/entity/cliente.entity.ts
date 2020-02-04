@@ -5,27 +5,22 @@ export class Cliente {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: 'char', length: 50 })
+  @Column({nullable:true})
   nome: string;
 
-  @Column({ type: 'date' })
+  @Column({nullable:true})
   data_nasc: Date;
 
-  @Column({ type: 'char', length: 50 })
+  @Column({nullable:true})
   cpf: string;
 
-  @Column({ type: 'char', length: 50 })
+  @Column({nullable:true})
   cidade: string;
 
-  @Column({ type: 'char', length: 50 })
+  @Column({nullable:true})
   estado: string;
 
-  //###################################################################
-  //############################ RELAÇÕES #############################
-  //###################################################################
+  @Column({nullable:true})
+  produtos: string;
 
-  // @ManyToOne(type => Pessoa, pessoa => pessoa.autenticacao, {
-  //   eager: true, cascade: true, onDelete: "CASCADE"
-  // })
-  // pessoa: Pessoa;
 }
