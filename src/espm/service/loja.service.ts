@@ -5,11 +5,11 @@ import { Loja } from '../entity/loja.entity';
 @Injectable()
 export class LojaService {
   constructor(
-    @Inject('cliente_database')
-    private readonly photoRepository: Repository<Loja>,
+    @Inject('loja_database')
+    private readonly lojaRepository: Repository<Loja>,
   ) {}
 
   async findAll(): Promise<Loja[]> {
-    return this.photoRepository.find();
+    return this.lojaRepository.find();
   }
 }
